@@ -20,7 +20,9 @@ Job areas with on-call service mark a very interesting example of a boundary in 
 \par
 Another study lists symptoms for mental, cognitive and behavioural effects. Table 1 shows a selection of symptoms. The kind of symptoms and their substantial prevalence among workers in on-call service shows the severity of the effects.
 
-\subsection{Heading 2 (Times 14; 18 Pt above; 9 Pt below; flush left)}
+\section{The domain of on-call service}
+
+\subsection{Effects on health}
 
 Text in Times 12; height 15. No indenting for first paragraph. No indenting for first paragraph. No indenting for first paragraph. No indenting for first paragraph. 
 
@@ -95,7 +97,7 @@ To explain this relation, we need to give a more fine-grained definition of an i
 
 \begin{figure}[htb]
   \begin{center}
-   \includegraphics{interruption definition small.PNG}
+   \includegraphics{interruption_definition_small.PNG}
   % \scalebox{.5}{\input{pager.jpg}}
   \end{center}
     \caption{\label{interruptions_fig}  Categorising interruptions based on the source and nature of the interruption. \cite[]{Fetter2018}}
@@ -103,8 +105,27 @@ To explain this relation, we need to give a more fine-grained definition of an i
 
 In the definitions, both the source and the nature of the interruption are being categorised. On the highest level, the authors distinguish between internal and external interruptions. Internal interruptions are all those which come from a subject's own thinking and needs. They can appear when a subject feels that he needs to draw its attention to another task or take a break. External interruptions on the other hand originate from the environment outside of the subject. Possible sources are not limited to persons. They can include for example a computer. External interruptions are being further broken down into those which happen in the physical world and those which take place in the digital world. Next, interruptions from the digital world are being split into technology-initiated and technology-mediated ones. At this point, a reference can be made back to paging technology and availability. Due to its design and its approach to minimize complexity, paging devices also reduce the technology-initiated kind of interruptions to a minimum while thereby leaving the greatest possible room for technology-mediated interruptions. In our case, the latter ones carry the information that is so critical in emergencies and so consequential when being missed. When we look at the examples that are given for technology-initiated interruptions, this becomes clearer.
 \begin{itemize}
-	\item A paging device generally is in no need for software updates. 
+	\item A paging device generally is in no need for software updates. This is because its software has had decades of time to mature. On top of that, its simplicity makes it unlikely that bugs are being found. However, if there was a software update available, the pager would not regularly check for it the way a smartphone does. There is no functionality for over-the-air updates in paging. Since it cannot know when an update is available, it is impossible that the user is being prompted to install it. Instead, the user would have to manually check for the availability of an update on an external source like a website, download it and manually flash the pager's firmware with it. If there is no interface (e.g. USB) on the device to provide the user with this opportunity, he needs to rely on the device vendor to update its future products with the new software.
+	\item The matured and simple software is also the reason why it is unlikely that it crashes on the pager. During its high amount of hours of operation on thousands of devices which all run the same software, potential bugs in the software would have with a high probability already lead to crashes. These crashes would have been likely lead to complains by the user and been investigated by the device vendor.
+	\item The news ticker example does not apply to our case either. Paging devices are designed for one single purpose. A news ticker in the sense that general, informative news are being provided instead of critical ones would distract the user from this purpose. 
 \end{itemize}
+
+\subsection{Signalling availability in Life Domain after long periods of unavailability}
+To avoid confusion, it has to be pointed out that in the previous sections, availability described the state of being able to receive interruptions in the work domain. Now, we would like to refer to being available in the life domain instead. After a long on-call working shift with maximum unavailability to the life domain, a worker might wish to balance this period with being highly available in the period afterwards. As has been discussed, the unavailability during the working hours contributes to a considerable amount of stress, that is expressed in an abundance of symptoms. A balance could help alleviate these symptoms. To take full advantage of his availability in the life domain, a worker needs to signal this state to his social environment. The signal needs to inform not only about the state of being technically reachable but the state of explicit availability. This way, communications can be initiated from both sides instead of originating from the worker only.
+\par
+As \cite[]{Fetter2018} explain, this can impose a challenge since there is a bias of signalling unavailability instead of availability in devices and software. Examples for this in smartphones are a Do-not-disturb mode or the Airplane mode which is often being used for the same purpose. In text communication, there are typically the features of blocking another user, muting a contact's chat or a group chat, as well as disabling read confirmations. The latter one is being used to lessen the pressure of being expected to answer soon after a message was confirmed to the sender as being read. In devices, the bias becomes most obvious when evaluating sensor development and related signal processing. Examples for this are using the microphone sensor to capture voice activity or analysing the data of an accelerometer sensor the determine the activity of running. Captured voice activity might be interpreted as holding a conversation with another person. Both states, conversation and running, would reasonably be used to signal unavailability. Sometimes, this is motivated by trying to design a smartphone software feature to save battery life. In the state of unavailability, it is acceptable for the device to poll for incoming messages less frequently, which saves battery life by using the communications (e.g. WiFi) interface less and drawing less power for radio signal sending.
+
+\subsection{Implications of unavailability signalling bias}
+In the work of \cite[]{Birnholtz2010}, some of the negative implications of signalling unavailability are being explored. In this perspective, it is not about how users are forced to signal unavailability by the software's bias. It is about users who purposefully invent different strategies to do such thing in order to avoid unwanted conversations or meetings. Nevertheless, these strategies begin to carry many negative associations for the user whose communication or approaching efforts are being rejected. Without a counterweight that also enables users to sometimes signal explicit availability instead, these negative associations become amplified.
+In the paper, an experiment with 194 US students as participants is described. The authors wanted to find out how the users find ways of deceptive texting to avoid unwanted social interactions. The strategies were termed "butler lies", hinting at the role butlers used to employ for their boss. When 
+undesired visitors requested to meet their boss, the butlers would tell them that he or she was busy when in fact the interaction was merely unwanted. Birnholtz et al. discovered three main strategies:
+\begin{itemize}
+	\item Temporal ambiguity: These were phrases like for example "sorry I just your text", hiding the fact that the text had actually been read long before. In the experiment, traditional SMS text messages were used which do not implement read confirmations. The users exploited this lack of information to have an excuse to not react or answer earlier to a message.
+	\item Activity ambiguity: This term describes messages like for example "Eating now, can I call you later?" The stated activity was not the activity that the user was really pursuing at the time of typing the message. These kinds of texts were often used to delay a conversation, without risking impoliteness by cancelling the conversation altogether.
+	\item Giving multiple options: In this strategy, the message sender was explaining that he was not yet sure whether to attend one of multiple events or go to one of several places. Leaving the possibility of a meeting open, the sender had actually already decided for himself against a meeting with the other person.
+\end{itemize}
+
+
 \subsection*{Books:} 
 
 \cite[]{Ham2002, MaVa1984}
