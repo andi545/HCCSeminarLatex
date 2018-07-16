@@ -70,7 +70,7 @@ Brands, company names, etc. should be written in capital letters (e.g., \textsc{
 References in the text should have the format [Author Year]. Sources with one author should be referenced as \cite[]{Gro1995}; sources with two authors like this \cite[]{MaVa1984}, and sources with more than two authors like this \cite[]{Ham2002}; if you have the page numbers, indicate them like this \cite[p. 16]{Gro1995} or this for a range \cite[pp. 16-17]{Gro1995}. 
 
 \section{How paging technology enables high availability}
-Pagers are small devices that are designed to be dedicated to the one task of delivering text messages quickly and reliably. Figure \ref{pager_fig1} shows an example of such a device. The interface elements on the front are very simple, with three arrow buttons for navigation and a power-on button. The display is a four-line alphanumeric monochrome display. The LCD has a back-light with adjustable contrast. It only displays the current date and time, and a message.
+Pagers are small devices that are designed to be dedicated to the one task of delivering text messages quickly and reliably. These messages are supposed to be short, concise and critical for the case of emergencies. Pagers are being used by hospitals, the police, energy distribution system operators and firefighters, to name some of the most important examples. Figure \ref{pager_fig1} shows an example of such a device. The interface elements on the front are very simple, with three arrow buttons for navigation and a power-on button. The display is a four-line alphanumeric monochrome display. The LCD has a back-light with adjustable contrast. It only displays the current date and time, and a message.
 \par
 Compared to a smartphone, the design is so much simpler and more efficient that the battery can be expected to last weeks instead of one or two days. The low-power CPU and the low-resolution monochrome display are the largest contributors to this feature. This is important in the case of a disaster, when there might be a power blackout and it is not possible to find a power outlet to charge a cellphone. The case of the device is sturdy and robust, so it can still function after being dropped from a moderate height. All of this contributes to a low-maintenance device, which on top of that can be quickly and inexpensively exchanged if it still gets lost or broken.
 
@@ -84,6 +84,27 @@ Compared to a smartphone, the design is so much simpler and more efficient that 
 \end{figure}
 
 Paging technology operates in its own dedicated network. It has been proven to work during disasters, whereas the cellphone network tends to get overloaded and unreliable when many calls are being made. Paging provides encryption for data transport and over the air transmission. Compared to cellphone tower's signals, paging signals are more suitable to penetrate buildings. Additionally, they implement the so-called simulcast technology to combine signals for better reception.
+\par
+While smartphones always offer some form of option in their software to suppress alters or messages, pagers provide an alert that is inevitable and cannot be ignored. This is important because it takes a choice away from the user for the sake of reliability.
+%TODO Trade-off between point-to-point and broadcast, maybe cite http://www.braddye.com/alerting.html
+\par
+Despite their old-fashioned and outdated appearance, the fact is that pagers are still in heavy use. They are relevant because they make a trade-off between complexity and reliability. Complexity, especially compared to smartphones, is reduced to a minimum in order to provide maximum availability. This availability leads to maximum reliability. The following section will explain how availability is related to interruptibility.
+
+\subsection{Relation of availability and interruptibility}
+To explain this relation, we need to give a more fine-grained definition of an interruption. In \cite[]{Fetter2018}, several subdefinitions of interruptions are collected from the literature and put into context very comprehensively. The figure \ref{interruptions_fig} of their work shall be taken to give an additional illustration of the hierarchy of definitions.
+
+\begin{figure}[htb]
+  \begin{center}
+   \includegraphics{interruption definition small.PNG}
+  % \scalebox{.5}{\input{pager.jpg}}
+  \end{center}
+    \caption{\label{interruptions_fig}  Categorising interruptions based on the source and nature of the interruption. \cite[]{Fetter2018}}
+\end{figure}
+
+In the definitions, both the source and the nature of the interruption are being categorised. On the highest level, the authors distinguish between internal and external interruptions. Internal interruptions are all those which come from a subject's own thinking and needs. They can appear when a subject feels that he needs to draw its attention to another task or take a break. External interruptions on the other hand originate from the environment outside of the subject. Possible sources are not limited to persons. They can include for example a computer. External interruptions are being further broken down into those which happen in the physical world and those which take place in the digital world. Next, interruptions from the digital world are being split into technology-initiated and technology-mediated ones. At this point, a reference can be made back to paging technology and availability. Due to its design and its approach to minimize complexity, paging devices also reduce the technology-initiated kind of interruptions to a minimum while thereby leaving the greatest possible room for technology-mediated interruptions. In our case, the latter ones carry the information that is so critical in emergencies and so consequential when being missed. When we look at the examples that are given for technology-initiated interruptions, this becomes clearer.
+\begin{itemize}
+	\item A paging device generally is in no need for software updates. 
+\end{itemize}
 \subsection*{Books:} 
 
 \cite[]{Ham2002, MaVa1984}
